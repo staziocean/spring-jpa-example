@@ -6,6 +6,7 @@ import fr.diginamic.spring.jpa.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class MainBean {
     @Autowired
     private GameService gameService;
 
+    @PostConstruct
     public void start() {
         System.out.println("Main bean started !");
 
