@@ -3,13 +3,11 @@ package fr.diginamic.spring.jpa.controller;
 import fr.diginamic.spring.jpa.model.Game;
 import fr.diginamic.spring.jpa.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@ResponseBody
+@RestController
 @RequestMapping("api/games")
 public class GameController {
 
