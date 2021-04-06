@@ -11,13 +11,12 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
 
-@Configuration
+    @Configuration
     @EnableWebMvc
     @ComponentScan(basePackages = "fr.diginamic.spring.jpa")
     public class WebMvcConfiguration implements WebMvcConfigurer {
+ /*
         @Override
         public void addResourceHandlers(ResourceHandlerRegistry registry) {
             registry.addResourceHandler("/css/**").addResourceLocations("/css/");
@@ -27,4 +26,5 @@ import org.springframework.web.servlet.view.JstlView;
         public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
             configurer.enable();
         }
+  */
 }

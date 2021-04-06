@@ -1,5 +1,11 @@
 package fr.diginamic.spring.jpa.model;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Positive;
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,10 +15,15 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotEmpty
+    @Length(min = 1, max = 50)
     private String name;
 
+    @Positive
     private Integer price;
 
+    @Min(0)
+    @Max(100)
     private Integer rating;
 
     @Enumerated(EnumType.STRING)
